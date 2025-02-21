@@ -6,7 +6,8 @@ import json
 
 
 def generate_expression_arithmetic(num_terms, len_term, has_parentheses=False):
-    
+
+
     inf_expresion = 10**(len_term-1)
     sup_expresion = 10**(len_term)
     
@@ -56,5 +57,27 @@ def generate_expression_arithmetic(num_terms, len_term, has_parentheses=False):
         "exercise":final_expr,
         "result":int(N(final_expr).evalf())
     })
+
+    def multiples_and_divisors(len_term, num_cifras):
+    
+        
+	    inf_expresion = 10**(num_cifras-1)
+	    sup_expresion = 10**(num_cifras)
+	    
+	    array_terms = [rd.randint(inf_expresion, sup_expresion) for n in range(0,len_term)]
+	    
+	    gcd = array_terms[0]
+	    for i in range(1,len(array_terms)):
+	        gcd = sympy.gcd(gcd, array_terms[i])
+	        
+	    return json.dumps(
+	        {
+	            "nums":array_terms,
+	            "result":int(gcd)
+	        }
+	    ) 
+	    
+        
+    
                 
-                
+               
