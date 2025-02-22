@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "./Header.css";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,16 +19,16 @@ export function Header() {
   }, []);
 
   return (
-    <header className="py-4 px-4 shadow-md font-sans tracking-wide  fixed top-0 left-0 w-full bg-white z-[1000]">
+    <header className="py-4 px-4 shadow-md font-sans tracking-wide sticky top-0 left-0 w-full bg-whitea h-2/12 ">
       <div className="flex flex-wrap items-center justify-between w-full">
         <a href="#" className="max-sm:hidden">
-          <img src="./public/Math.png " alt="logo" className="w-36" />
+          <img src="" alt="logo" className="w-36" />
         </a>
         <a href="#" className="hidden max-sm:block">
           <img src="" alt="logo" className="w-9" />
         </a>
 
-        {/* Menú principal */}
+        {/* Esta linea de codigo va dedicada a Anton*/}
         <nav
           className={`lg:flex gap-x-5 max-lg:fixed max-lg:bg-white max-lg:w-3/4 max-lg:max-w-[400px] 
                       max-lg:top-0 max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:p-6 
@@ -46,7 +45,7 @@ export function Header() {
               <img src="" alt="logo" className="w-36" />
             </a>
           </li>
-          {["Home", "Chat", "Blog", "Board", "About", "Contact"].map(
+          {["Home", "Chat", "Blog", "Stadistics", "About", "Contact"].map(
             (item, index) => (
               <li
                 key={index}

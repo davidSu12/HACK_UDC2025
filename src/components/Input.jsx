@@ -1,5 +1,3 @@
-import "./Input.css";
-
 export function Input({ children, inputType }) {
   return (
     <div className="flex flex-col justify-items-center">

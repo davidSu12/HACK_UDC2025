@@ -1,5 +1,5 @@
-import { Header } from "../Header";
-import { Input } from "../components/Input";
+import { Header } from "../components/Header.jsx";
+import { Input } from "../components/Input.jsx";
 export function Login() {
   return (
     <>
