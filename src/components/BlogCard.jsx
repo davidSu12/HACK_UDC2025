@@ -36,13 +36,13 @@ const blogPosts = [
 
 const BlogCard = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 ">
       <h1 className="text-3xl font-bold text-center mb-6">Últimos Artículos</h1>
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 gap-6 ">
         {blogPosts.map((post) => (
           <div
             key={post.id}
-            className="bg-white rounded-lg shadow-lg overflow-hidden"
+            className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-104"
           >
             <img
               src={post.image}

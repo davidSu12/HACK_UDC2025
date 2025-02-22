@@ -19,16 +19,17 @@ export function Header() {
   }, []);
 
   return (
-    <header className="py-4 px-4 shadow-md font-sans tracking-wide sticky top-0 left-0 w-full bg-whitea h-2/12 ">
+    <header className="py-4 px-4 shadow-md font-sans tracking-wide sticky top-0 left-0 w-full bg-white z-10">
       <div className="flex flex-wrap items-center justify-between w-full">
         <a href="#" className="max-sm:hidden">
-          <img src="" alt="logo" className="w-36" />
+          <img src=". " alt="logo" className="w-36" />
+          <p className="text-black">Logo</p>
         </a>
         <a href="#" className="hidden max-sm:block">
           <img src="" alt="logo" className="w-9" />
         </a>
 
-        {/* Esta linea de codigo va dedicada a Anton*/}
+        {/* Esta linea de codigo va dedicada a Anton */}
         <nav
           className={`lg:flex gap-x-5 max-lg:fixed max-lg:bg-white max-lg:w-3/4 max-lg:max-w-[400px] 
                       max-lg:top-0 max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:p-6 
@@ -64,10 +65,10 @@ export function Header() {
 
         {/* Botones de Login y Signup */}
         <div className="flex items-center space-x-4">
-          <button className="px-4 py-2 text-sm rounded-full font-bold text-gray-500 border-2 bg-transparent hover:bg-gray-50 transition-all ease-in-out duration-300">
+          <button className="px-4 py-2 text-sm rounded-xl font-bold text-gray-500 border-2 bg-transparent hover:bg-gray-200 transition-all ease-in-out duration-300">
             Login
           </button>
-          <button className="px-4 py-2 text-sm rounded-full font-bold text-white border-2 border-[#007bff] bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#007bff]">
+          <button className="px-4 py-2 text-sm rounded-xl font-bold text-white border-2 border-[#007bff] bg-[#007bff] transition-all ease-in-out duration-300 hover:bg-transparent hover:text-[#007bff]">
             Sign up
           </button>
 

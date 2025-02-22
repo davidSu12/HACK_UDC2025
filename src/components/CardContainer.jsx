@@ -10,6 +10,7 @@ export function CardContainer() {
       descripcion: "División de números enteros y decimales",
     },
     { titulo: "Prueba", descripcion: "Ejercicio de prueba 1" },
+    { titulo: "Prueba", descripcion: "Ejercicio de prueba 1" },
     { titulo: "Prueba", descripcion: "Ejercicio de prueba 2" },
   ];
   return (
