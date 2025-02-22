@@ -4,7 +4,7 @@ CREATE TABLE PROFESORES
 	nombre VARCHAR(20) NOT NULL,
 	apellidos VARCHAR(20) NOT NULL,
 	email VARCHAR(20) NOT NULL,
-	ADD CONSTRAINT pk_key PRIMARY KEY (id_profesor)
+	CONSTRAINT pk_key_profesores PRIMARY KEY (id_profesor)
 
 )
 
@@ -14,15 +14,15 @@ CREATE TABLE ALUMNOS
 	nombre VARCHAR(20) NOT NULL,
 	apellidos VARCHAR(20) NOT NULL,
 	email VARCHAR(20) NOT NULL,
-	ADD CONSTRAINT pk_key PRIMARY KEY (id_alumno)
+	CONSTRAINT pk_key_alumnos PRIMARY KEY (id_alumno)
 )
 
 CREATE TABLE CLASESPROFESOR
 (
 	id_profesor SMALLINT,
 	id_clase SMALLINT,
-	ADD CONSTRAINT pk_key PRIMARY KEY (id_profesor, id_clase),
-	ADD CONSTRAINT fg_key_to_profesores FOREIGN KEY (id_profesor) REFERENCES PROFESORES(id_profesor)
+	CONSTRAINT pk_key_clasesprofesor PRIMARY KEY (id_profesor, id_clase),
+	CONSTRAINT fg_key_to_profesores FOREIGN KEY (id_profesor) REFERENCES PROFESORES(id_profesor)
 )
 
 
@@ -30,15 +30,15 @@ CREATE TABLE CLASESALUMNO
 (
 	id_alumno SMALLINT,
 	id_clase SMALLINT,
-	ADD CONSTRAINT pk_key PRIMARY KEY (id_alumno, id_clase),
-	ADD CONSTRAINT fg_key_to_profesores FOREIGN KEY (id_alumno) REFERENCES ALUMNOS(id_alumno)
+	CONSTRAINT pk_key_clasesalumno PRIMARY KEY (id_alumno, id_clase),
+	CONSTRAINT fg_key_to_profesores FOREIGN KEY (id_alumno) REFERENCES ALUMNOS(id_alumno)
 )
 CREATE TABLE PROFESORALUMNO
 (
 
 	id_profesor SMALLINT,
 	id_alumno SMALLINT,
-	ADD CONSTRAINT pk_key PRIMARY KEY (if_profesor, id_alumno),
-	ADD CONSTRAINT fg_key_to_profesores FOREIGN KEY (id_profesor) REFERENCES PROFESORES(id_profesor),
-	ADD CONSTRAINT fg_key_to_profesores FOREIGN KEY (id_alumno) REFERENCES ALUMNOS(id_alumno)
+	CONSTRAINT pk_key_profesoralumno PRIMARY KEY (id_profesor, id_alumno),
+	CONSTRAINT fg_key_to_profesores FOREIGN KEY (id_profesor) REFERENCES PROFESORES(id_profesor),
+	CONSTRAINT fg_key_to_profesores FOREIGN KEY (id_alumno) REFERENCES ALUMNOS(id_alumno)
 )
