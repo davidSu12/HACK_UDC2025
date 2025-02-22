@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../../page/login/style/style.css">
+    <script type="text/javascript" src="../../page/login/javascript/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../../page/login/javascript/index.js"></script>
+</head>
+<body>
+
+
+
+<div id="container-title">
+    <h1 id="titulo-pagina"><span id="num-1">Math</span> <span id="num-2">Fun</span></h1>
+    <h3 id="text-init">Enjoy learning.</h3>
+</div>
+
+
+<div id ="container-login">
+
+    <h1 id="titulo-form"><span id="parte-1-titulo">Iniciar</span> sesion</h1>
+
+
+
+    <form action="../../page/login/server_side/login.php" method="post">
+        <input id="email" type="email" name="email" placeholder="Introduce tu correo electronico">
+        <input id="password" type="password" name="password" placeholder="Introduce tu contraseña">
+        <input id="submit" type="submit" value="iniciar sesion">
+    </form>
+
+    <button id="button-state" class="profesor">Soy profesor</button>
+
+    <p id="register-quest">¿No tienes cuenta? <a id="redirection-register" href="/register">Registrate!</a></p>
+
+
+</div>
+
+
+</body>
+</html>
